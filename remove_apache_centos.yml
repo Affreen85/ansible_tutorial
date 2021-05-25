@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Stop httpd service
+    ansible.builtin.service:
+      name: httpd
+      state: stopped
+
+  - name: remove apache-httpd package
+    package: 
+      name: httpd
+      state: absent
+
+  
