@@ -1,0 +1,7 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: Demo Inv VARS
+      debug:
+        msg: The time server is in our lab {{ ntp_server }}

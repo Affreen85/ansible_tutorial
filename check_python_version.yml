@@ -1,0 +1,8 @@
+---
+ - hosts: localhost
+   tasks:
+   - shell: "python3 --version"
+     register: python_version
+   - set_fact:
+      version: "{{ python_version.stdout }}"
+   - debug: var=version

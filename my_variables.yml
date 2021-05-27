@@ -1,0 +1,7 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: Demo inventory vars
+      debug:
+        msg: Hello World !! Time Server is {{ ntp_server }}

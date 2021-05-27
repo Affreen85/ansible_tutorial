@@ -1,0 +1,8 @@
+---
+ - hosts: localhost
+   tasks: 
+   - shell: "whoami"
+     register: user_name
+   - set_fact:
+      name: "{{ user_name.stdout }}"
+   - debug: var=name

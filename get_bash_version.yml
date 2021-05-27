@@ -1,0 +1,8 @@
+---
+ - hosts: localhost
+   tasks:
+   - shell: "bash --version"
+     register: bash_ver
+   - set_fact:
+      bash_version: "{{ bash_ver.stdout }}"
+   - debug: var=bash_version  

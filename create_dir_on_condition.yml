@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   tasks:
+   - name: Print a message
+     shell: "echo HELLO WORLD !"
+     register: msg
+   - debug: var=msg.stdout
+
+   - name: Create a directory
+     file:
+       path: /tmp/Hello_World
+       state: directory
+     when: "msg.stdout.find('HELLO')"

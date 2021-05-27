@@ -1,0 +1,8 @@
+---
+ - hosts: localhost
+   vars: 
+     ssh_port: 26
+   tasks:
+     - name: Demo Extra Var
+       debug:
+         msg: SSH port set to {{ ssh_port }}
