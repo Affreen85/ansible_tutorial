@@ -7,13 +7,37 @@
   - name: update repository index
     apt: 
       update_cache: yes
+    when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.10"
 
   - name: install apache2 package
     apt: 
       name: apache2
       state: latest
+    when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.10"
 
   - name: add php support for apache
     apt:
       name: libapache2-mod-php
       state: latest
+    when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.10"
+
+
+
+
+  - name: update repository index
+    dnf:
+      update_cache: yes
+    when: ansible_distribution == "CentOS" and ansible_distribution_version == "7.9"
+
+  - name: install apache2 package
+    package:
+      name: httpd
+      state: latest
+    when: ansible_distribution == "CentOS" and ansible_distribution_version == "7.9"
+
+  - name: add php support for apache
+    yum:
+      name: php
+      state: latest
+    when: ansible_distribution == "CentOS" and ansible_distribution_version == "7.9"
+
