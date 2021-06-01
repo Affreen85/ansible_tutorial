@@ -1,0 +1,7 @@
+---
+ - hosts: localhost
+   vars_files: variable_values.yml
+   tasks:
+   - debug:
+       msg: "Print pkgs name {{ item.name }} and age {{ item.age }}"
+     loop: "{{ pkgs }}"  

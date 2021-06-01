@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: demo regsitered vars
+      shell: echo Ans is easy
+      register: result
+
+    - name: debug result var
+      debug: result

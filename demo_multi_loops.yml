@@ -1,0 +1,20 @@
+---
+ - hosts: localhost
+   vars:
+     name:
+       - Mercury
+       - Venus
+       - Earth 
+     groups01:
+       - Planet
+       - Star
+
+   tasks:
+     - name: print name of planet
+       debug:
+         msg: "the name of the plane is {{item}}"
+       loop: "{{name}}" 
+     - name: print type of planet
+       debug:
+         msg: "type is {{item}}"
+       loop: "{{groups01}}"

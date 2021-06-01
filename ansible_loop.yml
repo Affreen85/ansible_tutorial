@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   tasks:
+     - debug:
+         msg: "This is planet {{item}} !" 
+       loop:
+         - Mercury
+         - Venus
+         - Earth
+         - Mars
+         - Jupiter
+
+

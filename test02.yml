@@ -1,0 +1,28 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: demo
+      shell: 
+        cmd: echo Testing
+      register: result 
+
+    - name: debug
+      debug:
+        var: result['cmd']
+
+    - name: Create Dir
+      shell: 
+        cmd: pwd
+      register: output
+
+    - name: debug facts
+      debug:
+        var: output.rc
+
+    - name: Create Dir
+      file:
+        path: /tmp/new
+        state: directory
+      
+

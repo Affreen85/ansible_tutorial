@@ -1,0 +1,11 @@
+---
+ x: 45
+ y: 
+  - 10
+  - 20
+  - 30
+  - "Ansible"
+  - False
+ pkgs:
+   - { name: "httpd", age: 54 }
+   - { name: "apache2", age: 20 }

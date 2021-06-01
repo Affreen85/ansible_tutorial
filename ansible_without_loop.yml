@@ -1,0 +1,23 @@
+---
+ - hosts: localhost
+   tasks:
+     - shell: echo "Hello World!"
+       register: result
+     - debug: var=result
+
+     - shell: echo "Hello Mercury!"
+       register: result
+     - debug: var=result
+
+     - shell: echo "Hello Venus!"
+       register: result
+     - debug: var=result
+
+     - shell: echo "Hello Mars!"
+       register: result
+     - debug: var=result
+     
+     - shell: echo "Hello Jupiter!"
+       register: result
+     - debug: var=result
+     

@@ -1,0 +1,10 @@
+---
+ - hosts: localhost
+   tasks:
+     - name: print name of planet with type
+       debug:
+         msg: "the planet  {{item.name}} is a {{item.groups01}}"
+       loop:
+         - { name: 'Earth', groups01: 'Planet'}
+         - { name: 'Moon', groups01: 'Satellite'}
+         - { name: 'Sun', groups01: 'Star'}   
