@@ -3,5 +3,6 @@
    vars_files: variable_values.yml
    tasks:
    - debug:
+       msg: "Testing"
        msg: "Print pkgs name {{ item.name }} and age {{ item.age }}"
      loop: "{{ pkgs }}"  

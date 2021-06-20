@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   vars_files: ./group_vars/all
+   vars:
+     # vault_url: "http://192.168.1.130:8200"
+     #vault_token: "s.5ttfz1w9WFaFVzRs94DZfKDU"
+     server_pass: "{{ lookup('hashi_vault', 'secret=NSX-T/credentials:bgpPassword token={{ vault.token }} url={{ vault.url }}') }}"
+   
+   tasks:
+   
+   - debug: 
+       msg: "{{ server_pass }}"
+  
