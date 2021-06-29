@@ -1,0 +1,6 @@
+---
+
+ - host: localhost
+   tasks:
+     - debug: 
+	     msg: "Printing second playbook!"
