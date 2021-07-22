@@ -1,0 +1,11 @@
+---
+ - hosts: localhost
+   tasks: 
+     - name: Run a pwsh command
+       shell: /home/affreen/ansible_tutorial/test_power.ps1
+       args:
+         executable: /snap/bin/powershell
+       register: result
+
+     - debug:
+         msg: "{{ result }}"
