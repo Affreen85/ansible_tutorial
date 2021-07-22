@@ -2,7 +2,7 @@
  - hosts: localhost
    tasks: 
      - name: Run a pwsh command
-       shell: /home/affreen/ansible_tutorial/test_power.ps1
+       shell: write-out "Hello World!"
        args:
          executable: /snap/bin/powershell
        register: result
