@@ -2,9 +2,9 @@
  - hosts: localhost
    tasks: 
      - name: Run a pwsh command
-       shell: Write-Output "Hello World!"
-       args:
-         executable: /snap/bin/powershell
+       command: pwsh -Command Get-Process | ConvertTo-JSON
+       # args:
+         # executable: /snap/bin/powershell
        register: result
 
      - debug:
