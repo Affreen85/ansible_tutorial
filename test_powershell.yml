@@ -2,7 +2,7 @@
  - hosts: localhost
    tasks: 
      - name: Run a pwsh command
-       command: pwsh -Command Get-Process | ConvertTo-JSON
+       command: pwsh -Command Write-Output "Hey There" | ConvertTo-JSON
        # args:
          # executable: /snap/bin/powershell
        register: result
