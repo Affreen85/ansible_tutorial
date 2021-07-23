@@ -2,7 +2,7 @@
  - hosts: localhost
    tasks: 
      - name: Run a pwsh command
-       command: pwsh -Command Write-Output "Hey There" | ConvertTo-JSON
+       command: pwsh test_power.ps1
        # args:
          # executable: /snap/bin/powershell
        register: result
